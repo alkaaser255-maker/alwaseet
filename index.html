@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منصة الوسيط العقاري | بوابتك لعقارات النخبة</title>
+    
+    <style>
+        :root { 
+            --primary: #1a2a3a; 
+            --accent: #D4AF37; 
+            --success: #27ae60; 
+            --danger: #e74c3c;
+            --light: #f8f9fa; 
+            --warning: #fff3cd;
+        }
+
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; background: var(--light); color: #333; line-height: 1.6; }
+        
+        /* شريط إخلاء المسؤولية العلوي */
+        .disclaimer-bar {
+            background: var(--danger);
+            color: white;
+            padding: 8px;
+            text-align: center;
+            font-size: 0.85em;
+            font-weight: bold;
+        }
+
+        header { 
+            background: linear-gradient(135deg, var(--primary), #2c3e50); 
+            color: white; padding: 50px 20px; text-align: center; 
+            border-bottom: 5px solid var(--accent);
+        }
+        .logo-svg { margin-bottom: 10px; }
+        header h1 { margin: 0; font-size: 2.5em; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+        /* العبارة التي طلبتها */
+        header p { color: #bdc3c7; font-size: 1.2em; margin-top: 10px; font-style: italic; }
+
+        .container { padding: 20px; max-width: 1200px; margin: auto; }
+
+        .commission-note {
+            background: var(--warning);
+            border: 1px solid #ffeeba;
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: bold;
+            color: #856404;
+        }
+
+        /* شريط الأقسام */
+        .filter-section { text-align: center; margin-bottom: 30px; white-space: nowrap; overflow-x: auto; padding: 10px; -webkit-overflow-scrolling: touch; }
+        .filter-btn { 
+            padding: 10px 22px; margin: 5px; border: 2px solid var(--accent); border-radius: 50px; 
+            background: white; color: var(--primary); font-weight: bold; cursor: pointer; transition: 0.3s;
+            display: inline-block;
+        }
+        .filter-btn.active, .filter-btn:hover { background: var(--accent); color: white; transform: translateY(-3px); }
+
+        .property-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 25px; }
+        .card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border: 1px solid #eee; transition: 0.3s; }
+        .card:hover { transform: translateY(-8px); border-color: var(--accent); }
+        .card img { width: 100%; height: 210px; object-fit: cover; }
+        .card-body { padding: 20px; }
+        .category-tag { font-size: 0.7rem; padding: 4px 12px; border-radius: 5px; background: #e8f5e9; color: var(--accent); font-weight: bold; margin-bottom: 10px; display: inline-block; }
+        .price-tag { color: var(--success); font-weight: 900; font-size: 1.5rem; margin: 10px 0; }
+        .wa-button { display: block; text-align: center; background: #25D366; color: white; padding: 13px; text-decoration: none; border-radius: 10px; font-weight: bold; }
+
+        .ad-form { background: white; padding: 35px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-top: 60px; border: 2px dashed var(--accent); }
+        .ad-form h2 { color: var(--primary); text-align: center; margin-bottom: 25px; }
+        .form-info { background: #e7f3ff; color: #0c5460; padding: 15px; border-radius: 10px; margin-bottom: 20px; font-size: 0.9em; border: 1px solid #b8daff; }
+        input, select, textarea { width: 100%; padding: 14px; margin-top: 10px; border: 1px solid #ccc; border-radius: 10px; font-family: inherit; box-sizing: border-box; }
+        .submit-btn { width: 100%; padding: 18px; background: var(--primary); color: var(--accent); border: none; border-radius: 10px; font-weight: bold; cursor: pointer; margin-top: 25px; font-size: 1.1rem; }
+
+        footer { text-align: center; padding: 50px; background: var(--primary); color: white; margin-top: 80px; }
+    </style>
+</head>
+<body>
+
+<div class="disclaimer-bar">
+    ⚠️ تنبيه: الموقع غير مسؤول عن أي تحويلات مالية تتم بين الأطراف. ننصح بالتعاملات الرسمية.
+</div>
+
+<header>
+    <div class="logo-svg">
+        <svg width="70" height="70" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 9.5L12 3L21 9.5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V9.5Z" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9 21V12H15V21" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </div>
+    <h1><span style="color: var(--accent);">الوسيط</span> العقاري</h1>
+    <p>بوابتك الآمنة لعقارات النخبة</p>
+</header>
+
+<div class="container">
+    <div class="commission-note">
+        📢 أبلغ المعلن أنك وجدت العرض هنا لإبراء الذمة. العمولة (2%) أمانة في ذمة المعلن.
+    </div>
+
+    <div class="filter-section">
+        <button class="filter-btn active" onclick="filterAds('الكل', this)">الكل</button>
+        <button class="filter-btn" onclick="filterAds('فيلا', this)">فلل</button>
+        <button class="filter-btn" onclick="filterAds('شقة', this)">شقق</button>
+        <button class="filter-btn" onclick="filterAds('أرض', this)">أراضي</button>
+        <button class="filter-btn" onclick="filterAds('عمارة', this)">عمائر</button>
+        <button class="filter-btn" onclick="filterAds('محل', this)">محلات</button>
+        <button class="filter-btn" onclick="filterAds('مزرعة', this)">مزارع</button>
+        <button class="filter-btn" onclick="filterAds('أخرى', this)">أخرى</button>
+    </div>
+
+    <div class="property-grid" id="adsGrid">
+        <div class="card" data-category="فيلا">
+            <img src="https://images.unsplash.com/photo-1580587771525-78b9bed2e194?w=600" alt="فيلا">
+            <div class="card-body">
+                <span class="category-tag">قسم الفلل</span>
+                <h3>فيلا فاخرة مودرن</h3>
+                <div class="price-tag">3,200,000 ريال</div>
+                <a href="https://wa.me/966XXXXXXXXX" class="wa-button">🗨️ تواصل مع المعلن الآن</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="ad-form">
+        <h2>أضف عقارك كمعلن</h2>
+        <div class="form-info">
+            📌 يقر المعلن بأن عمولة الموقع <b>2%</b> هي أمانة في ذمته. <br>
+            ❌ الموقع وسيط إعلاني ولا يتحمل مسؤولية التحويلات المالية بين الأطراف.
+        </div>
+        <select id="userType">
+            <option value="فيلا">فيلا</option>
+            <option value="شقة">شقة</option>
+            <option value="أرض">أرض</option>
+            <option value="عمارة">عمارة</option>
+            <option value="محل">محل</option>
+            <option value="مزرعة">مزرعة</option>
+            <option value="أخرى">أخرى</option>
+        </select>
+        <input type="text" id="userTitle" placeholder="عنوان العقار">
+        <input type="number" id="userPrice" placeholder="السعر">
+        <input type="tel" id="userPhone" placeholder="رقم الجوال">
+        <textarea id="userDesc" rows="3" placeholder="التفاصيل"></textarea>
+        <button class="submit-btn" onclick="sendToAdmin()">أوافق وأرسل للإدارة ✅</button>
+    </div>
+</div>
+
+<footer>
+    <p>جميع الحقوق محفوظة &copy; 2026 - منصة الوسيط العقاري</p>
+    <p style="font-size: 0.8em; color: #bdc3c7;">الموقع غير مسؤول عن أي اتفاقات مالية تتم خارج إطار التعاقد الرسمي.</p>
+</footer>
+
+<script>
+    function filterAds(category, btn) {
+        const cards = document.querySelectorAll('.card');
+        const buttons = document.querySelectorAll('.filter-btn');
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        cards.forEach(card => {
+            const cardCat = card.getAttribute('data-category');
+            card.style.display = (category === 'الكل' || cardCat === category) ? 'block' : 'none';
+        });
+    }
+
+    function sendToAdmin() {
+        const adminNumber = "966XXXXXXXXX"; // ضع رقمك هنا
+        const type = document.getElementById('userType').value;
+        const title = document.getElementById('userTitle').value;
+        const msg = `طلب إعلان جديد (${type}):%0Aالعنوان: ${title}%0Aإقرار: أوافق على عمولة 2% وأعلم أن الموقع غير مسؤول عن التحويلات.`;
+        window.open(`https://wa.me/${adminNumber}?text=${msg}`, '_blank');
+    }
+</script>
+
+</body>
+</html>
